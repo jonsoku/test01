@@ -9,6 +9,7 @@ import BoardCreate from '../Route/Board/BoardCreate';
 import Post from '../Route/Post';
 import Youtube from '../Route/ Youtube';
 import YoutubeCreate from '../Route/ Youtube/YoutubeCreate';
+import YoutubeShow from '../Route/ Youtube/YoutubeShow';
 export default () => (
         <Router>
         <>
@@ -21,7 +22,8 @@ export default () => (
                 <Route path="/boards/:id/edit" exact component={BoardEdit} />
                 <Route path="/posts" exact component={Post} />
                 <Route path="/youtubes" exact component={Youtube} />
-                <Route pateh="/youtubes/create" exact component={YoutubeCreate}/>
+                <Route path="/youtubes/create" exact component={YoutubeCreate}/>
+                <Route path="/youtubes/:id" exact component={YoutubeShow}/>
                 <Redirect from="*" to="/" />
             </Switch>
         </>

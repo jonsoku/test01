@@ -22,6 +22,7 @@ export default class Youtube extends Component {
         super(props);
         this.state = {
             youtubes : [],
+
             title : '',
             url : '',
             description : '',
@@ -35,6 +36,7 @@ export default class Youtube extends Component {
         }
         this.handleDelete = this.handleDelete.bind(this);
         this.handlePageChange = this.handlePageChange.bind(this);
+
     }
 
     handlePageChange(pageNumber) {
@@ -62,6 +64,7 @@ export default class Youtube extends Component {
             this.handlePageChange();
         }
     }
+
 
     async getYoutubes(){
         try{

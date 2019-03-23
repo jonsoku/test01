@@ -65,69 +65,67 @@ const DescriptionBox = styled.div`
     line-height : 5vh;
 `;
 
-const ShowBox = styled.div`
-    margin-top: 1.5rem;
-    a{
-        width: 100%;
-        border:0;
-        cursor:pointer;
-        transition: all 0.3s;
-        text-transform :uppercase;
-        &:hover{
-            color:#fff;
-            background-color: #434343;
-        }
-    }
-`;
 
-const ButtonBox = styled.div`
-    margin-top: 1.5rem;
-    button{
-        width: 100%;
-        border:0;
-        cursor:pointer;
-        transition: all 0.3s;
-        text-transform :uppercase;
-        &:hover{
-            color:#fff;
-            background-color: #434343;
-        }
-    }
-`;
 
 const Description = styled.span``;
 
-export default class YoutubeRender extends Component {
+export default class YoutubeShow extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            title : '',
-            url : '',
-            description : '',
+            youtube : [],
+            error : null,
+            loading : true
         }
+        this.renderYoutube = this.renderYoutube.bind(this)
     }
-    render() {
-        return this.props.youtubes.map(youtube => (
-            <Box key={youtube.id}>
-                <Id>#{youtube.id}</Id>
-                <Title>{youtube.title.length > 15 ? youtube.title.substring(0,15)+'...' : youtube.title}</Title>
+
+
+    renderYoutube(){
+        console.log(this.state.youtube.user, 'renderyoutube()')
+        return (
+            <Box key={this.state.youtube.id}>
+                <Id>#{this.state.youtube.id}</Id>
+                <Title>{this.state.youtube.title}</Title>
                 <Info>
-                    <Author>{youtube.user.name}</Author><span>{youtube.created_at}</span>
+                    <Author>{this.state.youtube.user.name}</Author><span>{this.state.youtube.created_at}</span>
                 </Info>
                 <div className="player-wrapper">
-                    <Player url={`${youtube.url}` } width="100%" height="100%" controls={true} className="react-player"/>
+                    <Player url={`${this.state.youtube.url}` } width="100%" height="100%" controls={true} className="react-player"/>
                 </div>
                 <DescriptionBox>
-                    <Description>{youtube.description.length > 28 ? youtube.description.substring(0,28)+'...' : youtube.description}</Description>
+                    <Description>{this.state.youtube.description}</Description>
                 </DescriptionBox>
-                <ShowBox>
-                    <Link to={`/youtubes/${youtube.id}`}>show</Link>
-                </ShowBox>
-                <ButtonBox>
-                    <button onClick={()=>this.props.onDelete(youtube.id)}>delete</button>
-                </ButtonBox>
             </Box>
-        ))
+        )
+    }
+
+    async getYoutube(){
+        try{
+            return await Axios.get(`/youtubes/${this.props.match.params.id}`).then(response => this.setState({
+                youtube : response.data.youtube,
+            }))
+        }catch{
+            this.setState({
+                error : 'YoutubeShow error'
+            })
+        }finally{
+            this.setState({
+                loading : false
+            })
+        }
+    }
+
+    componentDidMount(){
+        this.getYoutube();
+    }
+
+    render() {
+        return (
+        <div>
+            {this.renderYoutube()}
+        </div>
+        )
     }
 }

@@ -33,7 +33,10 @@ class YoutubeController extends Controller
 
     public function show(Youtube $youtube)
     {
-        //
+        $youtube->user;
+        return response()->json([
+            'youtube' => $youtube,
+        ]);
     }
 
     public function edit(Youtube $youtube)
