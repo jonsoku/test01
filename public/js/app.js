@@ -73153,6 +73153,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.state);
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
         to: "/youtubes/create"
       }, "Create"), this.state.loading ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(GridContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_YoutubeRender__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -73514,8 +73515,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _templateObject9() {
+function _templateObject10() {
   var data = _taggedTemplateLiteral([""]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n    margin-top: 1.5rem;\n    button{\n        width: 100%;\n        border:0;\n        cursor:pointer;\n        transition: all 0.3s;\n        text-transform :uppercase;\n        &:hover{\n            color:#fff;\n            background-color: #434343;\n        }\n    }\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -73525,7 +73536,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    margin-top: 1.5rem;\n    button{\n        width: 100%;\n        border:0;\n        cursor:pointer;\n        transition: all 0.3s;\n        text-transform :uppercase;\n        &:hover{\n            color:#fff;\n            background-color: #434343;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-top: 1.5rem;\n    a{\n        width: 100%;\n        border:0;\n        cursor:pointer;\n        transition: all 0.3s;\n        text-transform :uppercase;\n        &:hover{\n            color:#fff;\n            background-color: #434343;\n        }\n    }\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -73535,7 +73546,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    margin-top: 1.5rem;\n    a{\n        width: 100%;\n        border:0;\n        cursor:pointer;\n        transition: all 0.3s;\n        text-transform :uppercase;\n        &:hover{\n            color:#fff;\n            background-color: #434343;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height : 5vh;\n    background-color: #EAEAEA;\n    margin-top: 1.5rem;\n    text-align:center;\n    line-height : 5vh;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -73545,7 +73556,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height : 5vh;\n    background-color: #EAEAEA;\n    margin-top: 1.5rem;\n    text-align:center;\n    line-height : 5vh;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 0.8rem;\n    &::before{\n        content : 'Author : '\n    }\n    margin-right: 1rem;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -73555,7 +73566,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 0.8rem;\n    &::before{\n        content : 'Author : '\n    }\n    margin-right: 1rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 1rem 0;\n    text-align: right;\n\n    span{\n        font-size: 0.8rem;\n        &::before{\n            content : 'Created_at : '\n        }\n    }\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -73565,7 +73576,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    margin: 1rem 0;\n    text-align: right;\n\n    span{\n        font-size: 0.8rem;\n        &::before{\n            content : 'Created_at : '\n        }\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-weight : 900;\n    font-size : 3rem;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -73575,7 +73586,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    font-weight : 900;\n    font-size : 3rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position : absolute;\n    right:-25px;\n    top:5rem;\n    display:inline-block;\n    background-color: #FFD034;\n    color: #fff;\n    width: 3rem;\n    height: 3rem;\n    text-align:center;\n    line-height : 3rem;\n    box-shadow : 6px 6px 6px #DBDBDB;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -73585,7 +73596,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    position : absolute;\n    left:-15px;\n    top:-15px;\n    display:inline-block;\n    background-color: black;\n    color: #fff;\n    width: 3rem;\n    height: 3rem;\n    text-align:center;\n    line-height : 3rem;\n    border-radius: 50%;\n    box-shadow : 6px 6px 6px #DBDBDB;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position : absolute;\n    right:-25px;\n    top:1rem;\n    display:inline-block;\n    background-color: black;\n    color: #fff;\n    width: 3rem;\n    height: 3rem;\n    text-align:center;\n    line-height : 3rem;\n    box-shadow : 6px 6px 6px #DBDBDB;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -73613,13 +73624,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Box = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
 var Id = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject2());
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject3());
-var Info = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject4());
-var Author = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject5());
-var DescriptionBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject6());
-var ShowBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject7());
-var ButtonBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject8());
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject9());
+var Comments = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject3());
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject4());
+var Info = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject5());
+var Author = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject6());
+var DescriptionBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject7());
+var ShowBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject8());
+var ButtonBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject9());
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject10());
 
 var YoutubeRender =
 /*#__PURE__*/
@@ -73648,7 +73660,7 @@ function (_Component) {
       return this.props.youtubes.map(function (youtube) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Box, {
           key: youtube.id
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Id, null, "#", youtube.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, youtube.title.length > 15 ? youtube.title.substring(0, 15) + '...' : youtube.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Info, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Author, null, youtube.user.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, youtube.created_at)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Id, null, "#", youtube.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Comments, null, youtube.youtube_comments.length), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, youtube.title.length > 15 ? youtube.title.substring(0, 15) + '...' : youtube.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Info, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Author, null, youtube.user.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, youtube.created_at)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "player-wrapper"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
           url: "".concat(youtube.url),
@@ -74001,6 +74013,409 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Youtube__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Youtube */ "./resources/js/Route/ Youtube/Youtube.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (_Youtube__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./resources/js/Route/Applies/Apply.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Route/Applies/Apply.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Apply; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n    display:inline-block;\n    background-color:black;\n    color:#fff;\n    font-weight:900;\n    font-size:3rem;\n    padding: 1rem 2rem;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n    float:left;\n    width: 100vw;\n    margin: 0 auto;\n    text-align:center;\n    button{\n        border: 0;\n        padding: 2rem 5rem;\n        font-size: 2rem;\n        background-color: black;\n        color: #fff;\n        cursor:pointer;\n    }\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n    float:left;\n    width: 100vw;\n    margin: 3rem auto;\n    text-align:center;\n    select{\n        display:inline-block;\n        width:40%;\n        font-size: 3rem;\n        text-align:center;\n        border: 0;\n        margin: 1rem 0;\n        border-radius:30px;\n        height: auto;\n        line-height : normal; \n        padding: .8em .5em;\n        font-family: inherit;\n        outline-style: none; \n    }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n    float:left;\n    width: 100vw;\n    margin: 3rem auto;\n    text-align:center;\n    input{\n        display:inline-block;\n        width:40%;\n        font-size: 3rem;\n        text-align:center;\n        border: 0;\n        margin: 1rem 0;\n        border-radius:30px;\n        height: auto;\n        line-height : normal; \n        padding: .8em .5em;\n        font-family: inherit;\n        outline-style: none; \n    }\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    width:50%;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    width:50%;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    float:left;\n    width: 100vw;\n\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    width: 400vw;\n    margin-left : ", ";\n    transition: all 1s;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    width:100vw;\n    overflow:hidden;\n    background-color: #eaeaea;\n\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+var FormBox = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].form(_templateObject2(), function (props) {
+  return props.marginLeft ? props.marginLeft : null;
+});
+var Sex = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
+var Male = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject4());
+var Female = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject5());
+var Info1 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject6());
+var Info2 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject7());
+var Submit = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject8());
+var NextButton = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject9());
+
+var Apply =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Apply, _Component);
+
+  function Apply(props) {
+    var _this;
+
+    _classCallCheck(this, Apply);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Apply).call(this, props));
+    _this.state = {
+      gender: '',
+      name: '',
+      age: '',
+      sns: '',
+      visa: '',
+      level: '',
+      it: '',
+      error: null,
+      loading: true,
+      page: 0
+    };
+    _this.handleRadioGender = _this.handleRadioGender.bind(_assertThisInitialized(_this));
+    _this.handleChangeName = _this.handleChangeName.bind(_assertThisInitialized(_this));
+    _this.handleChangeAge = _this.handleChangeAge.bind(_assertThisInitialized(_this));
+    _this.handleChangeSns = _this.handleChangeSns.bind(_assertThisInitialized(_this));
+    _this.handleChangeVisa = _this.handleChangeVisa.bind(_assertThisInitialized(_this));
+    _this.handleChangeLevel = _this.handleChangeLevel.bind(_assertThisInitialized(_this));
+    _this.handleChangeIt = _this.handleChangeIt.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handleNextButton = _this.handleNextButton.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Apply, [{
+    key: "handleNextButton",
+    value: function handleNextButton() {
+      this.setState({
+        page: this.state.page + 1
+      });
+    } //============================
+
+  }, {
+    key: "handleSubmit",
+    value: function () {
+      var _handleSubmit = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
+                _context.prev = 1;
+                _context.next = 4;
+                return axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/applies', {
+                  gender: this.state.gender,
+                  name: this.state.name,
+                  age: this.state.age,
+                  sns: this.state.sns,
+                  visa: this.state.visa,
+                  level: this.state.level,
+                  it: this.state.it
+                });
+
+              case 4:
+                return _context.abrupt("return", _context.sent);
+
+              case 7:
+                _context.prev = 7;
+                _context.t0 = _context["catch"](1);
+                this.setState({
+                  error: 'apply post error'
+                });
+
+              case 10:
+                _context.prev = 10;
+                this.setState({
+                  loading: false
+                });
+                this.props.history.push('/');
+                return _context.finish(10);
+
+              case 14:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this, [[1, 7, 10, 14]]);
+      }));
+
+      function handleSubmit(_x) {
+        return _handleSubmit.apply(this, arguments);
+      }
+
+      return handleSubmit;
+    }() //============================
+
+  }, {
+    key: "handleRadioGender",
+    value: function handleRadioGender(e) {
+      this.setState({
+        gender: e.target.value
+      });
+    } //============================
+
+  }, {
+    key: "handleChangeName",
+    value: function handleChangeName(e) {
+      this.setState({
+        name: e.target.value
+      });
+    }
+  }, {
+    key: "handleChangeAge",
+    value: function handleChangeAge(e) {
+      this.setState({
+        age: e.target.value
+      });
+    }
+  }, {
+    key: "handleChangeSns",
+    value: function handleChangeSns(e) {
+      this.setState({
+        sns: e.target.value
+      });
+    } //============================
+
+  }, {
+    key: "handleChangeVisa",
+    value: function handleChangeVisa(e) {
+      this.setState({
+        visa: e.target.value
+      });
+    }
+  }, {
+    key: "handleChangeLevel",
+    value: function handleChangeLevel(e) {
+      this.setState({
+        level: e.target.value
+      });
+    }
+  }, {
+    key: "handleChangeIt",
+    value: function handleChangeIt(e) {
+      this.setState({
+        it: e.target.value
+      });
+    } //===========================
+
+  }, {
+    key: "render",
+    value: function render() {
+      console.log(this.state);
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FormBox, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
+        onSubmit: this.handleSubmit,
+        marginLeft: '-' + '100' * "".concat(this.state.page) + 'vw'
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Sex, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Male, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+        htmlFor: "apply_male"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+        className: "fas fa-male"
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        id: "apply_male",
+        type: "radio",
+        name: "radioGender",
+        value: "male",
+        onChange: this.handleRadioGender
+      }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Female, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+        htmlFor: "apply_female"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+        className: "fas fa-female"
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        id: "apply_female",
+        type: "radio",
+        name: "radioGender",
+        value: "female",
+        onChange: this.handleRadioGender
+      }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NextButton, {
+        onClick: this.handleNextButton
+      }, "next")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Info1, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        onChange: this.handleChangeName,
+        value: this.state.name,
+        placeholder: "name"
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        onChange: this.handleChangeAge,
+        value: this.state.age,
+        placeholder: "age"
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        onChange: this.handleChangeSns,
+        value: this.state.sns,
+        placeholder: "sns"
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NextButton, {
+        onClick: this.handleNextButton
+      }, "next")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Info2, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
+        value: this.state.visa,
+        onChange: this.handleChangeVisa
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "\uC6CC\uD0B9\uD640\uB9AC\uB370\uC774"
+      }, "\uC6CC\uD0B9\uD640\uB9AC\uB370\uC774"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "\uAE30\uC220"
+      }, "\uAE30\uC220"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "\uBC30\uC6B0\uC790"
+      }, "\uBC30\uC6B0\uC790"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "\uACE0\uB3C4\uC778\uC7AC"
+      }, "\uACE0\uB3C4\uC778\uC7AC")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
+        value: this.state.level,
+        onChange: this.handleChangeLevel
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "\uC0C1"
+      }, "\uC0C1"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "\uC911"
+      }, "\uC911"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "\uD558"
+      }, "\uD558")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
+        value: this.state.it,
+        onChange: this.handleChangeIt
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "1\uB144 \uBBF8\uB9CC"
+      }, "1\uB144 \uBBF8\uB9CC"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "1-2\uB144"
+      }, "1-2\uB144"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "2-3\uB144"
+      }, "2-3\uB144"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
+        value: "3\uB144 \uC774\uC0C1"
+      }, "3\uB144 \uC774\uC0C1")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NextButton, {
+        onClick: this.handleNextButton
+      }, "next")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Submit, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        type: "submit"
+      }, "\uC218\uAC15\uC2E0\uCCAD"))));
+    }
+  }]);
+
+  return Apply;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Route/Applies/index.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Route/Applies/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Apply__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Apply */ "./resources/js/Route/Applies/Apply.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (_Apply__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
 
@@ -75541,7 +75956,9 @@ var Header = function Header() {
     to: "/posts"
   }, "Post")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/youtubes"
-  }, "Youtebe"))))));
+  }, "Youtube")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/applies"
+  }, "Apply"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Header));
@@ -76013,6 +76430,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Route_Youtube__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Route/ Youtube */ "./resources/js/Route/ Youtube/index.js");
 /* harmony import */ var _Route_Youtube_YoutubeCreate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Route/ Youtube/YoutubeCreate */ "./resources/js/Route/ Youtube/YoutubeCreate.js");
 /* harmony import */ var _Route_Youtube_YoutubeShow__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../Route/ Youtube/YoutubeShow */ "./resources/js/Route/ Youtube/YoutubeShow.js");
+/* harmony import */ var _Route_Applies__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../Route/Applies */ "./resources/js/Route/Applies/index.js");
+
 
 
 
@@ -76062,6 +76481,10 @@ __webpack_require__.r(__webpack_exports__);
     path: "/youtubes/:id",
     exact: true,
     component: _Route_Youtube_YoutubeShow__WEBPACK_IMPORTED_MODULE_11__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    pate: "/apllies",
+    exact: true,
+    component: _Route_Applies__WEBPACK_IMPORTED_MODULE_12__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
     from: "*",
     to: "/"

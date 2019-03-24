@@ -35,7 +35,8 @@ const Header = () => (
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/boards">Board</Link></li>
                 <li><Link to="/posts">Post</Link></li>
-                <li><Link to="/youtubes">Youtebe</Link></li>
+                <li><Link to="/youtubes">Youtube</Link></li>
+                <li><Link to="/applies">Apply</Link></li>
             </ul>
             </HeaderContainer>
         </Container>

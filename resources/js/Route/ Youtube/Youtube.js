@@ -88,6 +88,7 @@ export default class Youtube extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
         <div>
             <Link to="/youtubes/create">Create</Link>

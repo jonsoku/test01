@@ -10,6 +10,7 @@ import Post from '../Route/Post';
 import Youtube from '../Route/ Youtube';
 import YoutubeCreate from '../Route/ Youtube/YoutubeCreate';
 import YoutubeShow from '../Route/ Youtube/YoutubeShow';
+import Apply from '../Route/Applies';
 export default () => (
         <Router>
         <>
@@ -24,6 +25,7 @@ export default () => (
                 <Route path="/youtubes" exact component={Youtube} />
                 <Route path="/youtubes/create" exact component={YoutubeCreate}/>
                 <Route path="/youtubes/:id" exact component={YoutubeShow}/>
+                <Route pate="/apllies" exact component={Apply} />
                 <Redirect from="*" to="/" />
             </Switch>
         </>

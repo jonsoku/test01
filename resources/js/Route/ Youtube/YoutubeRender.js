@@ -17,8 +17,8 @@ const Box = styled.div`
 `;
 const Id = styled.span`
     position : absolute;
-    left:-15px;
-    top:-15px;
+    right:-25px;
+    top:1rem;
     display:inline-block;
     background-color: black;
     color: #fff;
@@ -26,7 +26,20 @@ const Id = styled.span`
     height: 3rem;
     text-align:center;
     line-height : 3rem;
-    border-radius: 50%;
+    box-shadow : 6px 6px 6px #DBDBDB;
+`;
+
+const Comments = styled.span`
+    position : absolute;
+    right:-25px;
+    top:5rem;
+    display:inline-block;
+    background-color: #FFD034;
+    color: #fff;
+    width: 3rem;
+    height: 3rem;
+    text-align:center;
+    line-height : 3rem;
     box-shadow : 6px 6px 6px #DBDBDB;
 `;
 
@@ -97,6 +110,9 @@ const ButtonBox = styled.div`
 
 const Description = styled.span``;
 
+
+
+
 export default class YoutubeRender extends Component {
 
     constructor(props){
@@ -111,6 +127,7 @@ export default class YoutubeRender extends Component {
         return this.props.youtubes.map(youtube => (
             <Box key={youtube.id}>
                 <Id>#{youtube.id}</Id>
+                <Comments>{youtube.youtube_comments.length}</Comments>
                 <Title>{youtube.title.length > 15 ? youtube.title.substring(0,15)+'...' : youtube.title}</Title>
                 <Info>
                     <Author>{youtube.user.name}</Author><span>{youtube.created_at}</span>

@@ -9,7 +9,7 @@ class YoutubeController extends Controller
 {
     public function index()
     {
-        $youtubes = Youtube::with('user')->latest()->paginate(4);
+        $youtubes = Youtube::with('user')->with('youtubeComments')->latest()->paginate(4);
 
         return response()->json([
             'youtubes' => $youtubes

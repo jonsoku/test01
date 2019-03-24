@@ -10,7 +10,7 @@ use App\BoardComment;
 use App\Post;
 use App\Youtube;
 use App\YoutubeComment;
-
+use App\Apply;
 
 class User extends Authenticatable
 {
@@ -59,5 +59,8 @@ class User extends Authenticatable
     }
     public function youtubeComments(){
         return $this->hasMany(YoutubeComment::class);
+    }
+    public function applies(){
+        return $this->hasMany(Apply::class);
     }
 }
