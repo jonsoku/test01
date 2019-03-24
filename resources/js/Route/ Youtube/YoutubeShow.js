@@ -3,17 +3,17 @@ import Player from 'react-player';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import Axios from 'axios';
+import YoutubeCommentRender from './YoutubeCommentRender';
 
 const Box = styled.div`
+    width:60%;
+    margin: 0 auto;
     position: relative;
     padding: 2rem 3rem;
     position:relative;
     background: #F2F2F2;
     transition: all 0.6s;
     box-shadow : 6px 6px 6px #DBDBDB;
-    &:hover{
-        transform:scale(1.02)
-    }
 `;
 const Id = styled.span`
     position : absolute;
@@ -76,20 +76,47 @@ export default class YoutubeShow extends Component {
         this.state = {
             youtube : [],
             error : null,
-            loading : true
+            loading : true,
+            youtubeComments : [],
+            body : ''
+        };
+        this.renderYoutube = this.renderYoutube.bind(this);
+        this.handleChange1= this.handleChange1.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
+    }
+
+    handleChange1(e){
+        this.setState({
+            body : e.target.value
+        })
+    }
+    handleSubmit(e){
+        e.preventDefault();
+        Axios.post(`/youtubes/${this.state.youtube.id}/youtubeComments`,{
+            body : this.state.body
+        }).then(
+            this.getYoutube()
+        )
+    }
+    async handleDelete(id){
+        try{
+            return await Axios.delete(`/youtubes/${this.state.youtube.id}/youtubeComments/${id}`)
+        }catch{
+
+        }finally{
+            this.getYoutube();
         }
-        this.renderYoutube = this.renderYoutube.bind(this)
     }
 
 
     renderYoutube(){
-        console.log(this.state.youtube.user, 'renderyoutube()')
         return (
             <Box key={this.state.youtube.id}>
                 <Id>#{this.state.youtube.id}</Id>
                 <Title>{this.state.youtube.title}</Title>
                 <Info>
-                    <Author>{this.state.youtube.user.name}</Author><span>{this.state.youtube.created_at}</span>
+                    <span>{this.state.youtube.created_at}</span>
                 </Info>
                 <div className="player-wrapper">
                     <Player url={`${this.state.youtube.url}` } width="100%" height="100%" controls={true} className="react-player"/>
@@ -97,6 +124,22 @@ export default class YoutubeShow extends Component {
                 <DescriptionBox>
                     <Description>{this.state.youtube.description}</Description>
                 </DescriptionBox>
+
+                <div>
+                    <form onSubmit={this.handleSubmit}>
+                        <textarea
+                            onChange={this.handleChange1}
+                            value={this.state.body}
+                        />
+                        <button type="submit">댓글작성</button>
+                    </form>
+                </div>
+
+                <YoutubeCommentRender
+                youtubeComments={this.state.youtubeComments}
+                onDelete={this.handleDelete}
+                />
+                
             </Box>
         )
     }
@@ -105,6 +148,7 @@ export default class YoutubeShow extends Component {
         try{
             return await Axios.get(`/youtubes/${this.props.match.params.id}`).then(response => this.setState({
                 youtube : response.data.youtube,
+                youtubeComments: [...response.data.youtubeComments]
             }))
         }catch{
             this.setState({
@@ -120,6 +164,8 @@ export default class YoutubeShow extends Component {
     componentDidMount(){
         this.getYoutube();
     }
+
+
 
     render() {
         return (

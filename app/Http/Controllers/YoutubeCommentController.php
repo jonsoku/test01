@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\YoutubeComment;
 use Illuminate\Http\Request;
+use App\Youtube;
 
 class YoutubeCommentController extends Controller
 {
@@ -33,9 +34,18 @@ class YoutubeCommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Youtube $youtube)
     {
-        //
+        $this->validate($request, [
+            'body' => 'required | min:3 | max:1000',
+        ]);
+        $user = $request->user();
+        $user->youtubeComments()->create(array_merge(
+            $request->all(),
+            ['youtube_id' => $youtube->id]
+        ));
+
+        return redirect(route('youtubes.show', $youtube->id));
     }
 
     /**
@@ -80,6 +90,6 @@ class YoutubeCommentController extends Controller
      */
     public function destroy(YoutubeComment $youtubeComment)
     {
-        //
+        $youtubeComment->delete();
     }
 }

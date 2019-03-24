@@ -15,3 +15,4 @@ Route::resource('boards', 'BoardController')->middleware('auth');
 Route::resource('boards.boardComments', 'BoardCommentController')->middleware('auth');
 Route::resource('posts', 'PostController')->middleware('auth');
 Route::resource('youtubes', 'YoutubeController')->middleware('auth');
+Route::resource('youtubes.youtubeComments', 'YoutubeCommentController')->middleware('auth');

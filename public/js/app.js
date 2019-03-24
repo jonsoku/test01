@@ -70211,7 +70211,7 @@ function isStyledComponent(target) {
 
 // 
 
-var SC_ATTR = typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).SC_ATTR || 'data-styled';
+var SC_ATTR = typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).SC_ATTR || 'data-styled';
 
 var SC_VERSION_ATTR = 'data-styled-version';
 
@@ -73179,6 +73179,143 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/Route/ Youtube/YoutubeCommentRender.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/Route/ Youtube/YoutubeCommentRender.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return YoutubeCommentRender; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n    margin: 0.3rem;\n    background-color: blue;\n    color: #fff;\n    border : 0;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    margin: 0.3rem;\n    background-color: red;\n    color: #fff;\n    border: 0;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    &::before{\n        content : '\uC791\uC131\uC790 : '\n    }\n    font-size: 0.8rem;\n    margin-bottom: 0.5rem;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.2rem;\n    font-weight: 900;\n    margin-bottom: 0.5rem;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    background-color :#fff;\n    padding: 1.5rem;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    margin-top: 3rem;\n    background-color :#fff;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+var Box = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2());
+var Body = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject3());
+var UserName = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject4());
+var Delete = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject5());
+var Edit = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject6());
+
+var YoutubeCommentRender =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(YoutubeCommentRender, _Component);
+
+  function YoutubeCommentRender() {
+    _classCallCheck(this, YoutubeCommentRender);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(YoutubeCommentRender).apply(this, arguments));
+  }
+
+  _createClass(YoutubeCommentRender, [{
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      return this.props.youtubeComments.map(function (youtubeComment) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
+          key: youtubeComment.id
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Box, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Body, null, youtubeComment.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserName, null, youtubeComment.user.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Edit, null, "\uB313\uAE00 \uC218\uC815"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Delete, {
+          onClick: function onClick() {
+            return _this.props.onDelete(youtubeComment.id);
+          }
+        }, "\uB313\uAE00 \uC0AD\uC81C")));
+      });
+    }
+  }]);
+
+  return YoutubeCommentRender;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Route/ Youtube/YoutubeCreate.js":
 /*!******************************************************!*\
   !*** ./resources/js/Route/ Youtube/YoutubeCreate.js ***!
@@ -73557,9 +73694,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _YoutubeCommentRender__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./YoutubeCommentRender */ "./resources/js/Route/ Youtube/YoutubeCommentRender.js");
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -73642,7 +73788,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n    padding: 2rem 3rem;\n    position:relative;\n    background: #F2F2F2;\n    transition: all 0.6s;\n    box-shadow : 6px 6px 6px #DBDBDB;\n    &:hover{\n        transform:scale(1.02)\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width:60%;\n    margin: 0 auto;\n    position: relative;\n    padding: 2rem 3rem;\n    position:relative;\n    background: #F2F2F2;\n    transition: all 0.6s;\n    box-shadow : 6px 6px 6px #DBDBDB;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -73652,6 +73798,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -73680,47 +73827,45 @@ function (_Component) {
     _this.state = {
       youtube: [],
       error: null,
-      loading: true
+      loading: true,
+      youtubeComments: [],
+      body: ''
     };
     _this.renderYoutube = _this.renderYoutube.bind(_assertThisInitialized(_this));
+    _this.handleChange1 = _this.handleChange1.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.handleDelete = _this.handleDelete.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(YoutubeShow, [{
-    key: "renderYoutube",
-    value: function renderYoutube() {
-      console.log(this.state.youtube.user, 'renderyoutube()');
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Box, {
-        key: this.state.youtube.id
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Id, null, "#", this.state.youtube.id), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Title, null, this.state.youtube.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Info, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Author, null, this.state.youtube.user.name), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, this.state.youtube.created_at)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "player-wrapper"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        url: "".concat(this.state.youtube.url),
-        width: "100%",
-        height: "100%",
-        controls: true,
-        className: "react-player"
-      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(DescriptionBox, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Description, null, this.state.youtube.description)));
+    key: "handleChange1",
+    value: function handleChange1(e) {
+      this.setState({
+        body: e.target.value
+      });
     }
   }, {
-    key: "getYoutube",
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.post("/youtubes/".concat(this.state.youtube.id, "/youtubeComments"), {
+        body: this.state.body
+      }).then(this.getYoutube());
+    }
+  }, {
+    key: "handleDelete",
     value: function () {
-      var _getYoutube = _asyncToGenerator(
+      var _handleDelete = _asyncToGenerator(
       /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _this2 = this;
-
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(id) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("/youtubes/".concat(this.props.match.params.id)).then(function (response) {
-                  return _this2.setState({
-                    youtube: response.data.youtube
-                  });
-                });
+                return axios__WEBPACK_IMPORTED_MODULE_5___default.a.delete("/youtubes/".concat(this.state.youtube.id, "/youtubeComments/").concat(id));
 
               case 3:
                 return _context.abrupt("return", _context.sent);
@@ -73728,23 +73873,95 @@ function (_Component) {
               case 6:
                 _context.prev = 6;
                 _context.t0 = _context["catch"](0);
+
+              case 8:
+                _context.prev = 8;
+                this.getYoutube();
+                return _context.finish(8);
+
+              case 11:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this, [[0, 6, 8, 11]]);
+      }));
+
+      function handleDelete(_x) {
+        return _handleDelete.apply(this, arguments);
+      }
+
+      return handleDelete;
+    }()
+  }, {
+    key: "renderYoutube",
+    value: function renderYoutube() {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Box, {
+        key: this.state.youtube.id
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Id, null, "#", this.state.youtube.id), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Title, null, this.state.youtube.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Info, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, this.state.youtube.created_at)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "player-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        url: "".concat(this.state.youtube.url),
+        width: "100%",
+        height: "100%",
+        controls: true,
+        className: "react-player"
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(DescriptionBox, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Description, null, this.state.youtube.description)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
+        onChange: this.handleChange1,
+        value: this.state.body
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        type: "submit"
+      }, "\uB313\uAE00\uC791\uC131"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_YoutubeCommentRender__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        youtubeComments: this.state.youtubeComments,
+        onDelete: this.handleDelete
+      }));
+    }
+  }, {
+    key: "getYoutube",
+    value: function () {
+      var _getYoutube = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var _this2 = this;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                _context2.next = 3;
+                return axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("/youtubes/".concat(this.props.match.params.id)).then(function (response) {
+                  return _this2.setState({
+                    youtube: response.data.youtube,
+                    youtubeComments: _toConsumableArray(response.data.youtubeComments)
+                  });
+                });
+
+              case 3:
+                return _context2.abrupt("return", _context2.sent);
+
+              case 6:
+                _context2.prev = 6;
+                _context2.t0 = _context2["catch"](0);
                 this.setState({
                   error: 'YoutubeShow error'
                 });
 
               case 9:
-                _context.prev = 9;
+                _context2.prev = 9;
                 this.setState({
                   loading: false
                 });
-                return _context.finish(9);
+                return _context2.finish(9);
 
               case 12:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee, this, [[0, 6, 9, 12]]);
+        }, _callee2, this, [[0, 6, 9, 12]]);
       }));
 
       function getYoutube() {
@@ -74410,12 +74627,12 @@ function (_Component) {
   _createClass(BoardShow, [{
     key: "renderBoardBox",
     value: function renderBoardBox() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, this.renderBoard(), this.renderBoardCommentsBox());
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, this.renderBoard(), this.renderBoardCommentsBox());
     }
   }, {
     key: "renderBoardCommentsBox",
     value: function renderBoardCommentsBox() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, this.renderBoardCommentsForm(), this.renderBoardComments());
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, this.renderBoardCommentsForm(), this.renderBoardComments());
     }
   }, {
     key: "handleSubmit",
@@ -74451,7 +74668,6 @@ function (_Component) {
   }, {
     key: "renderBoardComments",
     value: function renderBoardComments() {
-      console.log(this.state);
       return this.state.boardComments.map(function (boardComment) {
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           key: boardComment.id
@@ -75928,8 +76144,8 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/jongseoklee/Documents/projects/test1/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/jongseoklee/Documents/projects/test1/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\LEEJONGSEOK\Documents\projects\test01\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\LEEJONGSEOK\Documents\projects\test01\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

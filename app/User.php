@@ -9,6 +9,9 @@ use App\Board;
 use App\BoardComment;
 use App\Post;
 use App\Youtube;
+use App\YoutubeComment;
+
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -53,5 +56,8 @@ class User extends Authenticatable
 
     public function youtubes(){
         return $this->hasMany(Youtube::class);
+    }
+    public function youtubeComments(){
+        return $this->hasMany(YoutubeComment::class);
     }
 }

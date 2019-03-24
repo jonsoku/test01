@@ -28,19 +28,19 @@ export default class BoardShow extends Component {
 
     renderBoardBox(){
         return(
-            <>
+            <div>
                 {this.renderBoard()}
                 {this.renderBoardCommentsBox()}
-            </>
+            </div>
         )
     }
 
     renderBoardCommentsBox(){
         return (
-            <>
+            <div>
                 {this.renderBoardCommentsForm()}
                 {this.renderBoardComments()}
-            </>
+            </div>
         )
     }
 
@@ -83,7 +83,6 @@ export default class BoardShow extends Component {
     }
 
     renderBoardComments(){
-        console.log(this.state)
         return this.state.boardComments.map(boardComment => (
             <div key={boardComment.id}>
                 <ul>

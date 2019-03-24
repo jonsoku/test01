@@ -34,8 +34,12 @@ class YoutubeController extends Controller
     public function show(Youtube $youtube)
     {
         $youtube->user;
+
+        $youtubeComments = $youtube->youtubeComments()->with('user')->latest()->get();
+
         return response()->json([
             'youtube' => $youtube,
+            'youtubeComments' => $youtubeComments
         ]);
     }
 

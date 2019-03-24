@@ -15,7 +15,12 @@ class CreateYoutubeCommentsTable extends Migration
     {
         Schema::create('youtube_comments', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id')->index();
+            $table->unsignedBigInteger('youtube_id')->index();
+            $table->text('body');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('youtube_id')->references('id')->on('youtubes')->onDelete('cascade');
         });
     }
 
