@@ -11,6 +11,8 @@ use App\Post;
 use App\Youtube;
 use App\YoutubeComment;
 use App\Apply;
+use App\Notice;
+use App\NoticeComment;
 
 class User extends Authenticatable
 {
@@ -62,5 +64,13 @@ class User extends Authenticatable
     }
     public function applies(){
         return $this->hasMany(Apply::class);
+    }
+
+    public function notices(){
+        return $this->hasMany(Notice::class);
+    }
+
+    public function noticeComments(){
+        return $this->hasMany(NoticeComment::class);
     }
 }

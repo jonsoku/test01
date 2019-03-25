@@ -32,10 +32,12 @@ export default class Youtube extends Component {
             activePage: 1,
             itemsCountPerPage: 1,
             totalItemsCount: 1,
-            pageRangeDisplayed: 10
+            pageRangeDisplayed: 10,
+            keyword : ''
         }
         this.handleDelete = this.handleDelete.bind(this);
         this.handlePageChange = this.handlePageChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
 
     }
 
@@ -82,6 +84,12 @@ export default class Youtube extends Component {
         }
     }
 
+    handleChange(e){
+        this.setState({
+            keyword : e.target.value
+        })
+    }
+
     componentDidMount(){
         this.getYoutubes();
         this.handlePageChange();
@@ -92,12 +100,20 @@ export default class Youtube extends Component {
         return (
         <div>
             <Link to="/youtubes/create">Create</Link>
+            <div>
+                <input value={this.state.keyword}
+                onChange={this.handleChange}
+                placeholder="검색 ... "
+                />
+            </div>
             {this.state.loading
                 ? (<Loader />)
                 : (
                     <GridContainer>
                         <YoutubeRender
-                        youtubes={this.state.youtubes}
+                        youtubes={this.state.youtubes.filter(
+                            youtube => youtube.title.indexOf(this.state.keyword) > -1
+                        )}
                         onDelete={this.handleDelete}
                         />
 

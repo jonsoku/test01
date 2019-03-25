@@ -44,10 +44,10 @@ const Info1 = styled.div`
         margin: 1rem 0;
         border-radius:30px;
         height: auto;
-        line-height : normal; 
+        line-height : normal;
         padding: .8em .5em;
         font-family: inherit;
-        outline-style: none; 
+        outline-style: none;
     }
 `;
 
@@ -65,10 +65,10 @@ const Info2 = styled.div`
         margin: 1rem 0;
         border-radius:30px;
         height: auto;
-        line-height : normal; 
+        line-height : normal;
         padding: .8em .5em;
         font-family: inherit;
-        outline-style: none; 
+        outline-style: none;
     }
 `;
 
@@ -203,6 +203,7 @@ export default class Apply extends Component {
     render() {
         console.log(this.state)
         return (
+        <>
         <FormBox>
             <Form onSubmit={this.handleSubmit} marginLeft={'-'+'100'*`${this.state.page}`+'vw'}>
                 <Sex>
@@ -227,30 +228,28 @@ export default class Apply extends Component {
                             name="radioGender"
                             value="female"
                             onChange={this.handleRadioGender}
-                            />                        
+                            />
                         </div>
                     </Female>
-                    <NextButton onClick={this.handleNextButton}>next</NextButton>
                 </Sex>
                 <Info1>
-                    <input 
+                    <input
                     onChange={this.handleChangeName}
                     value={this.state.name}
                     placeholder="name"
                     />
                     <br></br>
-                    <input 
+                    <input
                     onChange={this.handleChangeAge}
                     value={this.state.age}
                     placeholder="age"
                     />
                     <br></br>
-                    <input 
+                    <input
                     onChange={this.handleChangeSns}
                     value={this.state.sns}
                     placeholder="sns"
                     />
-                    <NextButton onClick={this.handleNextButton}>next</NextButton>
                 </Info1>
                 <Info2>
                     <select value={this.state.visa} onChange={this.handleChangeVisa}>
@@ -272,13 +271,14 @@ export default class Apply extends Component {
                         <option value="2-3년">2-3년</option>
                         <option value="3년 이상">3년 이상</option>
                     </select>
-                    <NextButton onClick={this.handleNextButton}>next</NextButton>
                 </Info2>
                 <Submit>
                     <button type="submit">수강신청</button>
                 </Submit>
             </Form>
         </FormBox>
+        <NextButton onClick={this.handleNextButton}>next</NextButton>
+        </>
         )
     }
 }

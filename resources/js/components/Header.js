@@ -13,14 +13,16 @@ const Container = styled.div`
 `;
 const HeaderContainer = styled.div`
     ul{
-        display:flex;
+        display:grid;
+        grid-template-columns: repeat(auto-fit , minmax(100px, 1fr));
     }
     li{
+        text-align: center;
+        padding: 2rem 0;
 
     }
     a{
         display: block;
-        padding: 30px;
         font-size: 1.5rem;
         font-weight: 900;
         text-transform:uppercase;
@@ -33,10 +35,13 @@ const Header = () => (
             <HeaderContainer>
             <ul>
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/introduces">Introduce</Link></li>
+                <li><Link to="/notices">Notices</Link></li>
                 <li><Link to="/boards">Board</Link></li>
                 <li><Link to="/posts">Post</Link></li>
                 <li><Link to="/youtubes">Youtube</Link></li>
-                <li><Link to="/applies">Applye</Link></li>
+                <li><Link to="/applies">Apply</Link></li>
+                <li><Link to="/contacts">Contact</Link></li>
             </ul>
             </HeaderContainer>
         </Container>

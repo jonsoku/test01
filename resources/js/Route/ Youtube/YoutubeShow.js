@@ -116,7 +116,7 @@ export default class YoutubeShow extends Component {
                 <Id>#{this.state.youtube.id}</Id>
                 <Title>{this.state.youtube.title}</Title>
                 <Info>
-                    <span>{this.state.youtube.created_at}</span>
+                    <Author>{this.state.youtube.user && this.state.youtube.user.name}</Author><span>{this.state.youtube.created_at}</span>
                 </Info>
                 <div className="player-wrapper">
                     <Player url={`${this.state.youtube.url}` } width="100%" height="100%" controls={true} className="react-player"/>
@@ -139,7 +139,7 @@ export default class YoutubeShow extends Component {
                 youtubeComments={this.state.youtubeComments}
                 onDelete={this.handleDelete}
                 />
-                
+
             </Box>
         )
     }

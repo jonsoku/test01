@@ -102,12 +102,7 @@ export default class Board extends Component {
     }
 
     componentDidMount(){
-        console.log('componentDidMount 실행')
-    }
-
-    componentWillMount(){
         this.getBoards();
-        console.log('componentWillMount 실행')
     }
 
     render() {

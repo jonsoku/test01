@@ -158,7 +158,7 @@ class Slider extends Component {
             this.state.images.map(image => (
                 <SlideImageBox key={image.id}>
                     {/* <SlideImage src={image}></SlideImage> */}
-                    <SlideImage background={`${image}`}>
+                    <SlideImage key={image.id} background={`${image}`}>
                         <p>content test</p>
                     </SlideImage>
                 </SlideImageBox>
