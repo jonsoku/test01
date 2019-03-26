@@ -76036,6 +76036,7 @@ function (_Component) {
                 return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/notices').then(function (response) {
                   return _this3.setState({
                     notices: _toConsumableArray(response.data.notices.data),
+                    user: response.data.user,
                     activePage: response.data.notices.current_page,
                     itemsCountPerPage: response.data.notices.per_page,
                     totalItemsCount: response.data.notices.total
@@ -76083,6 +76084,7 @@ function (_Component) {
     value: function render() {
       var _this4 = this;
 
+      console.log(this.state.user && this.state.user.id, 'Notice');
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Info, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, null, "#Notice")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Search, {
         onChange: this.handleSearch,
         value: this.state.keyword,
@@ -76099,9 +76101,9 @@ function (_Component) {
         onChange: this.handlePageChange,
         itemClass: "page-item",
         linkClass: "page-link"
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CreateLink, {
+      }), this.state.user && this.state.user.id === 1 ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CreateLink, {
         to: "/notices/create"
-      }, "Create")));
+      }, "Create") : ''));
     }
   }]);
 

@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 
 class NoticeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $notices = Notice::with('user')->with('noticeComments')->latest()->paginate(10);
+        $user = $request->user();
 
         return response()->json([
-            'notices' => $notices
+            'notices' => $notices,
+            'user' => $user
         ]);
     }
 

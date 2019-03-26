@@ -83,6 +83,7 @@ export default class Notice extends Component {
         try{
             return await Axios.get('/notices').then(response => this.setState({
                 notices : [...response.data.notices.data],
+                user : response.data.user ,
                 activePage: response.data.notices.current_page,
                 itemsCountPerPage: response.data.notices.per_page,
                 totalItemsCount: response.data.notices.total
@@ -102,6 +103,7 @@ export default class Notice extends Component {
     }
 
     render() {
+        console.log(this.state.user&&this.state.user.id, 'Notice')
         return (
         <>
             <Info>
@@ -121,7 +123,7 @@ export default class Notice extends Component {
                     itemClass='page-item'
                     linkClass='page-link'
                     />
-                <CreateLink to={`/notices/create`}>Create</CreateLink>
+                {this.state.user&&this.state.user.id === 1 ? <CreateLink to={`/notices/create`}>Create</CreateLink> : ''}
             </Container>
         </>
         )
